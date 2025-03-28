@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="header-container">
+        <div class="search-box">
+          <input type="text" placeholder="Search ..." />
+        </div>
+
+        <div class="logo">
+          <img src="/assets/Images/Logo.svg" alt="header_logo" />
+        </div>
+
+        <div class="header-right">
+          <div class="currency">
+            <img src="/assets/Images/currency.svg" alt="US Flag" />
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span id="selected-currency">USD $</span>
+                <i class="arrow"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li data-value="USD">USD $</li>
+                <li data-value="EUR">EUR €</li>
+                <li data-value="GBP">GBP £</li>
+                <li data-value="INR">INR ₹</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="signin">SIGN IN</a>
+          <div class="cart">
+            <img src="/assets/Images/Cart.svg" alt="Cart" />
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Product Details -->
+    <div class="gallery_section">
+      <div class="bread_cumb">
+        <ol class="cd-breadcrumb">
+          <li><a href="#0">Home</a></li>
+          <li><a href="#0" class="">Shirts</a></li>
+          <li>
+            <a href="#0" class="bread_cumb_link"
+              >White Poplin Solid Dress Shirt</a
+            >
+          </li>
+        </ol>
+      </div>
+
+      <!-- Product Details View -->
+      <div class="product-container">
+        <div class="image-gallery">
+          <div class="thumbnails">
+            <img
+              src="/assets/Images/Shirts/shirt-1.svg"
+              onclick="changeImage('/assets/Images/product-details.png')"
+            />
+            <img
+              src="/assets/Images/Shirts/shirt-2.svg"
+              onclick="changeImage('/assets/Images/Shirts/shirt-2.svg')"
+            />
+            <img
+              src="/assets/Images/Shirts/shirt-3.svg"
+              onclick="changeImage('/assets/Images/Shirts/shirt-3.svg')"
+            />
+          </div>
+          <div class="main-image">
+            <img id="mainImage" src="/assets/Images/product-details.png" />
+          </div>
+        </div>
+        <div class="product-details">
+          <h1>White Poplin Solid Dress Shirt</h1>
+          <p class="price">$275.00</p>
+
+          <div class="sizes-guide-main">
+            <label>Size:</label>
+            <div class="size-guides">
+              <a href="#">Size guide</a>
+              <img src="/assets/Images/Sizeguides.svg" alt="size-guides" />
+            </div>
+          </div>
+
+          <div class="size-selection">
+            <select>
+              <option>Select a size</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+
+          <div class="quantity">
+            <label>Quantity:</label>
+            <div class="quantity-btn">
+              <button onclick="decreaseQuantity()">-</button>
+              <input type="text" id="quantity" value="1" min="1" />
+              <button onclick="increaseQuantity()">+</button>
+            </div>
+          </div>
+
+          <div class="details">
+            <label>Details</label>
+            <ul class="details-desc">
+              <li>Classic Point Collar</li>
+              <li>Single Button Angle Cut Cuff</li>
+              <li>Box Pleat Front</li>
+              <li>Mother of Pearl Buttons</li>
+              <li>White Solid Poplin Fabric</li>
+              <li>100% Egyptian Cotton; Italian Mill</li>
+              <li>Designed and Made in California, USA</li>
+              <li>Item Number: 25023</li>
+            </ul>
+          </div>
+
+          <div class="cart-btn">
+            <button class="add-to-cart">ADD TO CART</button>
+            <div class="shop-payment-more">
+              <button class="shop-pay">
+                Buy with
+                <img src="/assets/Images/Shop Pay.svg" alt="shop-pay-logo" />
+              </button>
+              <span>
+                <a href="#">More Payment Options</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="product-social-icons">
+            <div class="social-icons-box">
+              <a href="#">
+                <img src="/assets/Images/ProductEmail.svg" alt="Email icon"
+              /></a>
+            </div>
+            <div class="social-icons-box">
+              <a href="#"
+                ><img
+                  src="/assets/Images/ProductFacebook.svg"
+                  alt="Facebook icon"
+              /></a>
+            </div>
+            <div class="social-icons-box">
+              <a href="#"
+                ><img
+                  src="/assets/Images/ProductTwitter.svg"
+                  alt="Twitter icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- You may also like section -->
+      <div class="like-title">
+        <h4>You may also like</h4>
+      </div>
+      <div class="wrapper">
+        <div class="slider-left-arrow-main arrow-left">
+          <img id="left" src="/assets/Images/left-arrow.svg" alt="left-arrow" />
+        </div>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-1.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-2.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-3.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-5.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-6.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="/assets/Images/Shirts/shirt-7.svg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <p class="category-name">White Twill Solid Dress Shirt</p>
+            <h5 class="category-price">$275.00</h5>
+            <button class="category-size">select Size</button>
+          </li>
+        </ul>
+        <div class="slider-left-arrow-main arrow-right">
+          <img
+            id="right"
+            src="/assets/Images/right-arrow.svg"
+            alt="left-arrow"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section contact-us">
+          <h3>CONTACT US</h3>
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Phone.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Call Us</p>
+              <span>(310)-278-4500</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Email.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Inquiry for Mail</p>
+              <span>info@antoshirt.com</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Location.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Address</p>
+              <span>258 N. Beverly Drive Beverly Hills, CA 90210</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Alarm.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Showroom Time</p>
+              <h6>Mon - Fri, 10am to 6pm</h6>
+              <h6>Saturday, 10am to 5pm</h6>
+              <h6>Sunday, Closed</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Bespoke</a></li>
+            <li><a href="#">Heritage</a></li>
+            <li><a href="#">Film & TV</a></li>
+            <li><a href="#">Shirt Gallery</a></li>
+            <li><a href="#">Shirt Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h3>NEWSLETTER</h3>
+          <p>
+            Like Being First? Get can't-miss style news, before everybody else.
+          </p>
+          <input type="email" placeholder="Email address" />
+          <button class="subscribe_btn">SUBSCRIBE</button>
+          <div class="social-icons">
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Facebook.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Twitter.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Instagram.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Tiktok.svg"
+                  alt="phone"
+                /></div
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-rights">
+          <p class="footer-reserved">
+            © 2025 <strong>Anto</strong>, All rights reserved.
+          </p>
+          <p class="footer-powered">Powered by <strong>Shopify</strong></p>
+        </div>
+
+        <div class="payment-icons">
+          <div class="payment-image">
+            <img src="assets/Images/FooterImages/Visa.svg" alt="Visa" />
+          </div>
+
+          <div class="payment-image">
+            <img
+              src="assets/Images/FooterImages/Mastercard.svg"
+              alt="Mastercard"
+            />
+          </div>
+
+          <div class="payment-image">
+            <img
+              src="assets/Images/FooterImages/amex.png"
+              alt="American Express"
+            />
+          </div>
+
+          <div class="payment-image">
+            <img src="assets/Images/FooterImages/discover.png" alt="Discover" />
+          </div>
+
+          <div class="payment-image">
+            <img
+              src="assets/Images/FooterImages/Dinners Club.svg"
+              alt="Dinners Club"
+            />
+          </div>
+
+          <div class="payment-image">
+            <img src="assets/Images/FooterImages/Elo.svg" alt="Elo" />
+          </div>
+
+          <div class="payment-image">
+            <img src="assets/Images/FooterImages/JCB.svg" alt="JCB" />
+          </div>
+
+          <div class="payment-image">
+            <img
+              src="assets/Images/FooterImages/Union Pay.svg"
+              alt="Union Pay"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
