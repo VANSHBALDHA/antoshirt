@@ -12,17 +12,14 @@
     <script src="/main.js" defer></script>
   </head>
   <body>
-    <!-- Header Section -->
     <header>
       <div class="header-container">
         <div class="search-box">
           <input type="text" placeholder="Search ..." />
         </div>
-
         <div class="logo">
           <img src="/assets/Images/Logo.svg" alt="header_logo" />
         </div>
-
         <div class="header-right">
           <div class="currency">
             <img src="/assets/Images/currency.svg" alt="US Flag" />
@@ -47,6 +44,64 @@
         </div>
       </div>
     </header>
+    <div>
+      <div class="mobile-nav">
+        <div class="mobile-toggle-btn">
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="logo">
+          <img src="/assets/Images/Logo.svg" alt="header_logo" />
+        </div>
+        <div class="Search-icon-mobile">
+          <img src="/assets/Images/search.svg" alt="header_logo" />
+        </div>
+        <div class="profile-icon-mobile">
+          <img src="/assets/Images/profile-mobile.svg" alt="header_logo" />
+        </div>
+        <div class="cart-icon-mobile">
+          <img src="/assets/Images/Cart.svg" alt="header_logo" />
+        </div>
+      </div>
+      <div class="navbar">
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+      </div>
+      <div class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+
+        <div class="custom-mobile-currency">
+          <select class="currency">
+            <option>Currency</option>
+            <option>USD $</option>
+            <option>EUR €</option>
+            <option>GBP £</option>
+            <option>INR ₹</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- Product Details -->
     <div class="gallery_section">
@@ -90,7 +145,9 @@
           <div class="sizes-guide-main">
             <label>Size:</label>
             <div class="size-guides">
-              <a href="#">Size guide</a>
+              <a href="/assets/Images/Measurement_Guide_c_1.jpg" target="_blank"
+                >Size guide</a
+              >
               <img src="/assets/Images/Sizeguides.svg" alt="size-guides" />
             </div>
           </div>
@@ -98,9 +155,15 @@
           <div class="size-selection">
             <select>
               <option>Select a size</option>
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
+              <option>14.5</option>
+              <option>15</option>
+              <option>15.5</option>
+              <option>16</option>
+              <option>16.5</option>
+              <option>17</option>
+              <option>17.5</option>
+              <option>18</option>
+              <option>18.5</option>
             </select>
           </div>
 
@@ -267,7 +330,7 @@
             </div>
             <div>
               <p>Call Us</p>
-              <span>(310)-278-4500</span>
+              <a href="tel:+(310)-278-4500"><span>(310)-278-4500</span></a>
             </div>
           </div>
 
@@ -277,7 +340,9 @@
             </div>
             <div>
               <p>Inquiry for Mail</p>
-              <span>info@antoshirt.com</span>
+              <a href="mailto:info@antoshirt.com">
+                <span>info@antoshirt.com</span>
+              </a>
             </div>
           </div>
 
@@ -378,44 +443,44 @@
         </div>
 
         <div class="payment-icons">
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/Visa.svg" alt="Visa" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/Mastercard.svg"
+              src="assets/Images/FooterImages/Master card.svg"
               alt="Mastercard"
             />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/amex.png"
+              src="assets/Images/FooterImages/amex.svg"
               alt="American Express"
             />
           </div>
 
-          <div class="payment-image">
-            <img src="assets/Images/FooterImages/discover.png" alt="Discover" />
+          <div class="">
+            <img src="assets/Images/FooterImages/discover.svg" alt="Discover" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/Dinners Club.svg"
+              src="assets/Images/FooterImages/diners club.svg"
               alt="Dinners Club"
             />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/Elo.svg" alt="Elo" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/JCB.svg" alt="JCB" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
               src="assets/Images/FooterImages/Union Pay.svg"
               alt="Union Pay"

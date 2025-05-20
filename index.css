@@ -22,7 +22,7 @@
 /* Header Section */
 header {
   background-color: black;
-  padding: 16px 0;
+  padding: 12px 0;
   width: 100%;
 }
 
@@ -42,7 +42,7 @@ header {
 
 .search-box input {
   width: 100%;
-  padding: 12px 18px 12px 50px;
+  padding: 10px 18px 10px 50px;
   border: 1px solid #5a5a5a;
   background-color: #000;
   font-family: "Avenir LT Pro", sans-serif;
@@ -71,7 +71,7 @@ header {
 }
 
 .logo img {
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
 }
@@ -252,15 +252,227 @@ header {
   }
 }
 
+/* Navbar Section */
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #d9d9d9;
+  padding: 0 200px;
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 10px 14px 10px;
+  gap: 6px;
+}
+
+.navbar .navbar-menu a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Avenir LT Pro", sans-serif;
+}
+
+.navbar .nav-main {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 18px 10px 14px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Avenir LT Pro", sans-serif;
+}
+/* .navbar a:hover {
+  background-color: #575757;
+} */
+
+.mobile-nav {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+  padding-top: 60px;
+  display: none;
+}
+.sidebar .nav-main {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 18px 10px 14px 18px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Avenir LT Pro", sans-serif;
+  display: block;
+  cursor: pointer;
+}
+/* .sidebar a:hover {
+  background-color: #575757;
+} */
+
+.sidebar .navbar-menu {
+  display: flex;
+  align-items: center;
+  padding: 18px 10px 14px 18px;
+  gap: 8px;
+}
+
+.sidebar .navbar-menu a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-family: "Avenir LT Pro", sans-serif;
+  display: block;
+  cursor: pointer;
+}
+
+.custom-mobile-currency {
+  padding: 18px 0;
+}
+
+.custom-mobile-currency .currency {
+  width: 100%;
+  padding: 18px;
+  color: #fff;
+  font-size: 18px;
+  background: none;
+  border: none;
+  border-top: 1px solid #545454;
+  font-weight: 500;
+  appearance: none;
+  cursor: pointer;
+  background-image: url(/assets/Images/dropdownCustomArrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  background-size: 14px;
+}
+
+.custom-mobile-currency .currency:focus-visible {
+  outline: none;
+}
+
+.sidebar.active {
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 25px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.content {
+  margin-left: 0;
+  transition: margin-left 0.5s;
+}
+.content.active {
+  margin-left: 250px;
+}
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-container {
+    display: none;
+  }
+
+  header {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+  }
+
+  .mobile-toggle-btn {
+  }
+
+  .Search-icon-mobile {
+  }
+
+  .profile-icon-mobile {
+  }
+
+  .cart-icon-mobile {
+  }
+}
+
 /* Banner Section */
 .hero {
   position: relative;
+  /* z-index: -1; */
 }
 
 .hero img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.hero .transparent-hero-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* height: 100%; */
+}
+
+.hero .transparent-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.transparent-hero-img-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  /* height: 100%; */
 }
 
 .hero-content {
@@ -310,6 +522,12 @@ header {
   line-height: 18px;
   font-weight: 700;
   font-family: "Avenir LT Pro", sans-serif;
+  transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+  border-bottom: 1px solid rgba(100, 107, 107, 0.7);
+  opacity: 0.6;
 }
 
 /* Product Section */
@@ -324,6 +542,8 @@ header {
 .product_section .product_info {
   position: relative;
   display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .product_section .product_info img {
@@ -331,6 +551,29 @@ header {
   height: auto;
   object-fit: cover;
 }
+
+.product_section .product_info .product-transparent-img {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: auto;
+}
+
+.product_section .product_info .product-hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product_section .product_info:hover .product-hover-img {
+  opacity: 1;
+}
+
 .product_section .product_info .product_category {
   position: absolute;
   bottom: 10%;
@@ -483,12 +726,11 @@ header {
   font-size: 16px;
   line-height: 18px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .hero-2-content a:hover {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  opacity: 0.8;
 }
 
 .learn-more {
@@ -497,6 +739,12 @@ header {
   color: #5a5a5a;
   border-bottom: 2px solid #5a5a5a;
   font-family: "Avenir LT Pro", sans-serif;
+  transition: 0.3s;
+}
+
+.learn-more:hover {
+  border-bottom: 1px solid rgba(100, 107, 107, 0.7);
+  opacity: 0.6;
 }
 
 /* Banner 3 Section */
@@ -520,6 +768,12 @@ header {
   font-weight: 700;
   font-family: "Avenir LT Pro", sans-serif;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.hero-3-content .btn:hover {
+  border-bottom: 1px solid rgba(100, 107, 107, 0.7);
+  opacity: 0.8;
 }
 
 /* gallery_section */
@@ -818,12 +1072,20 @@ footer {
 }
 
 .footer-container .footer-section .contact-icon {
-  border: 2px solid #000;
+  border: 1px solid #000;
   padding: 11px;
   background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.footer-container .footer-section .contact-icon:hover {
+  background-color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  text-decoration: none;
 }
 
 .footer-container .footer-section .contact-icon img {
@@ -841,16 +1103,21 @@ footer {
 }
 
 .footer-container .footer-section .contact-info span {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   font-family: "Avenir LT Pro", sans-serif;
   color: #5a5a5a;
 }
 
+.footer-container .footer-section .contact-info a {
+  text-decoration: none;
+}
+
 .footer-container .footer-section .contact-info h6 {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 400;
   font-family: "Avenir LT Pro", sans-serif;
   color: #5a5a5a;
 }
@@ -916,7 +1183,7 @@ footer {
 }
 
 .newsletter .subscribe_btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .social-icons {
@@ -973,19 +1240,8 @@ footer {
   gap: 4px;
 }
 
-.footer-bottom .payment-icons .payment-image {
-  background-color: #ffffff;
-  border: 1px solid #d6dce5;
-  padding: 18px 12px;
-  height: 40px;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-bottom .payment-icons .payment-image img {
-  width: 40px;
+.footer-bottom .payment-icons img {
+  width: 100%;
   height: auto;
 }
 
@@ -1045,26 +1301,96 @@ footer {
   border-top: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
   font-family: "Avenir LT Pro", sans-serif;
-  padding: 10px;
+  padding: 10px 0;
   background: #fff;
   width: 100%;
   margin-bottom: 65px;
 }
 
-.filter-container .custom-dropdown .sort-dropdown {
-  padding: 15px;
-  border: 1px solid #e0e0e0;
+.filter-container .dropdown-main {
+  display: flex;
+  /* flex: 1; */
+  gap: 10px;
+}
+
+.filter-container .dropdown-main .custom-dropdown .price {
+  width: 105px;
+}
+
+.filter-container .dropdown-main .custom-dropdown .fabric {
+  width: 163px;
+}
+.filter-container .dropdown-main .custom-dropdown .pattern {
+  width: 121px;
+}
+.filter-container .dropdown-main .custom-dropdown .style {
+  width: 140px;
+}
+.filter-container .dropdown-main .custom-dropdown .color {
+  width: 109px;
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .filter-container {
+    display: grid;
+  }
+
+  .filter-container .dropdown-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-container .dropdown-main .custom-dropdown .price,
+  .filter-container .dropdown-main .custom-dropdown .fabric,
+  .filter-container .dropdown-main .custom-dropdown .pattern,
+  .filter-container .dropdown-main .custom-dropdown .style,
+  .filter-container .dropdown-main .custom-dropdown .color {
+    width: 100%;
+  }
+}
+
+.filter-container .custom-dropdown {
+  position: relative;
+}
+
+.filter-container .custom-dropdown select {
+  /* width: 100%; */
+  height: 46px;
   background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  color: #5a5a5a;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #5a5a5a;
-  cursor: pointer;
+  padding: 0 20px 0 17px;
   font-family: "Avenir LT Pro", sans-serif;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("/assets/Images/dropdownCustomArrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  background-size: 12px;
 }
 
-.filter-container .custom-dropdown .sort-dropdown:focus-visible {
+.filter-container .custom-dropdown select:focus-visible {
   outline: none;
+}
+
+.filter-container .sort-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  .filter-container .sort-container {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+  }
 }
 
 .category-product {
@@ -1111,6 +1437,14 @@ footer {
   padding: 14px 80px;
   border: none;
   text-transform: uppercase;
+  transition: 0.4s;
+  border: 1px solid #000;
+}
+
+.category-product .category-info .category-size:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
 }
 
 .pagination {
@@ -1333,8 +1667,7 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
-
-  .wrapper{
+  .wrapper {
     margin-bottom: 50px;
   }
 
@@ -1568,7 +1901,7 @@ footer {
 }
 
 .product-container .product-details .cart-btn .add-to-cart:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .product-container .product-details .cart-btn .shop-pay {
@@ -1588,6 +1921,11 @@ footer {
   max-width: 316px;
   cursor: pointer;
   margin-bottom: 16px;
+  transition: 0.4s;
+}
+
+.product-container .product-details .cart-btn .shop-pay:hover {
+  background-color: #3c0def;
 }
 
 .product-container .product-details .cart-btn .shop-payment-more {
@@ -1609,6 +1947,12 @@ footer {
   line-height: 24px;
   text-decoration: none;
   border-bottom: 1px solid #6c6c6c;
+  transition: 0.3s;
+}
+
+.product-container .product-details .cart-btn span a:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 .product-container .product-details .product-social-icons {
@@ -1625,6 +1969,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.product-container
+  .product-details
+  .product-social-icons
+  .social-icons-box:hover {
+  background-color: #dbdbdb;
 }
 
 .product-container
@@ -1650,6 +2003,13 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    order: 1;
+    padding-top: 30px;
+  }
+
+  .thumbnails img {
+    width: 150px;
+    height: 150px;
   }
 
   /* .product-container .product-details .cart-btn {
@@ -1674,7 +2034,155 @@ footer {
     padding-top: 30px;
   }
 
+  .thumbnails img {
+    width: 100px;
+    height: 100px;
+  }
+
   .product-container .product-details .cart-btn {
     display: grid;
   }
+}
+
+/* Home page Slider 1 styles */
+
+.slider-container {
+  margin: 100px 110px 100px 0;
+  display: flex;
+  gap: 55px;
+}
+
+.slider-container .slider-main {
+  position: relative;
+}
+
+.slider-container .slider-main .slider-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-container .slider-main .slider-btns {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-container .slider-main .slider-btns a {
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "Avenir LT Pro", sans-serif;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.slider-container .slider-main .slider-btns .slider-main-box-arrow {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container .slider-main .left-arrow-box {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slider-container .slider-main .left-arrow-box img {
+}
+
+.slider-container .home-slider-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.slider-container .card {
+  scroll-snap-align: start;
+  /* height: 100%; */
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.slider-container .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+
+.slider-container .card .category-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: "Avenir LT Pro", sans-serif;
+}
+
+.slider-container .card .category-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: "Avenir LT Pro", sans-serif;
+}
+
+.slider-container .card .category-size {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  padding: 14px 80px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Avenir LT Pro", sans-serif;
+  transition: 0.4s;
+  border: 1px solid #000;
+}
+
+.slider-container .card .category-size:hover {
+  opacity: 0.8;
+}
+
+/* Home page Slider 2 styles */
+.slider-tie-container {
+  margin: 100px 0 100px 60px;
+  display: flex;
+  gap: 55px;
+}
+
+.slider-tie-container .home-slider-content {
+  gap: 10px;
+}
+
+.slider-main .slider-shadow-img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

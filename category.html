@@ -14,11 +14,9 @@
         <div class="search-box">
           <input type="text" placeholder="Search ..." />
         </div>
-
         <div class="logo">
           <img src="/assets/Images/Logo.svg" alt="header_logo" />
         </div>
-
         <div class="header-right">
           <div class="currency">
             <img src="/assets/Images/currency.svg" alt="US Flag" />
@@ -43,6 +41,64 @@
         </div>
       </div>
     </header>
+    <div>
+      <div class="mobile-nav">
+        <div class="mobile-toggle-btn">
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="logo">
+          <img src="/assets/Images/Logo.svg" alt="header_logo" />
+        </div>
+        <div class="Search-icon-mobile">
+          <img src="/assets/Images/search.svg" alt="header_logo" />
+        </div>
+        <div class="profile-icon-mobile">
+          <img src="/assets/Images/profile-mobile.svg" alt="header_logo" />
+        </div>
+        <div class="cart-icon-mobile">
+          <img src="/assets/Images/Cart.svg" alt="header_logo" />
+        </div>
+      </div>
+      <div class="navbar">
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+      </div>
+      <div class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+
+        <div class="custom-mobile-currency">
+          <select class="currency">
+            <option>Currency</option>
+            <option>USD $</option>
+            <option>EUR €</option>
+            <option>GBP £</option>
+            <option>INR ₹</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- Category Section -->
     <div class="gallery_section">
@@ -58,25 +114,73 @@
 
       <!-- Category Filter -->
       <div class="filter-container">
-        <div>
+        <div class="dropdown-main">
           <div class="custom-dropdown">
-            <select id="sort" class="sort-dropdown">
+            <select class="price-filter price">
               <option>Price</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>Newest First</option>
+              <option>Below $50</option>
+              <option>$51 - $100</option>
+              <option>$101 - $200</option>
+              <option>$201 - $300</option>
+            </select>
+          </div>
+          <div class="custom-dropdown">
+            <select class="price-filter fabric">
+              <option>Fabric Weave</option>
+              <option>Poplin</option>
+              <option>Stretch</option>
+              <option>Twill</option>
+            </select>
+          </div>
+          <div class="custom-dropdown">
+            <select class="price-filter pattern">
+              <option>Pattern</option>
+              <option>Solid</option>
+              <option>Stripe</option>
+            </select>
+          </div>
+          <div class="custom-dropdown">
+            <select class="price-filter style">
+              <option>Shirt Style</option>
+              <option>Dress</option>
+              <option>Sport</option>
+            </select>
+          </div>
+          <div class="custom-dropdown">
+            <select class="price-filter color">
+              <option>Color</option>
+              <option>Black</option>
+              <option>Blue</option>
+              <option>Brown</option>
+              <option>Gray</option>
+              <option>Off-White</option>
+              <option>White</option>
             </select>
           </div>
         </div>
 
         <div class="sort-container">
-          <label for="sort">Sort by:</label>
-          <select id="sort" class="sort-dropdown">
+          <span for="sort">Sort by:</span>
+          <div class="custom-dropdown">
+            <select class="price-filter">
+              <option value="manual">Featured</option>
+              <option value="best-selling" selected="selected">
+                Best selling
+              </option>
+              <option value="title-ascending">Alphabetically, A-Z</option>
+              <option value="title-descending">Alphabetically, Z-A</option>
+              <option value="price-ascending">Price, low to high</option>
+              <option value="price-descending">Price, high to low</option>
+              <option value="created-ascending">Date, old to new</option>
+              <option value="created-descending">Date, new to old</option>
+            </select>
+          </div>
+          <!-- <select id="sort" class="sort-dropdown">
             <option>Best Selling</option>
             <option>Price: Low to High</option>
             <option>Price: High to Low</option>
             <option>Newest First</option>
-          </select>
+          </select> -->
         </div>
       </div>
 
@@ -265,7 +369,7 @@
             </div>
             <div>
               <p>Call Us</p>
-              <span>(310)-278-4500</span>
+              <a href="tel:+(310)-278-4500"><span>(310)-278-4500</span></a>
             </div>
           </div>
 
@@ -275,7 +379,9 @@
             </div>
             <div>
               <p>Inquiry for Mail</p>
-              <span>info@antoshirt.com</span>
+              <a href="mailto:info@antoshirt.com">
+                <span>info@antoshirt.com</span>
+              </a>
             </div>
           </div>
 
@@ -376,44 +482,44 @@
         </div>
 
         <div class="payment-icons">
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/Visa.svg" alt="Visa" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/Mastercard.svg"
+              src="assets/Images/FooterImages/Master card.svg"
               alt="Mastercard"
             />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/amex.png"
+              src="assets/Images/FooterImages/amex.svg"
               alt="American Express"
             />
           </div>
 
-          <div class="payment-image">
-            <img src="assets/Images/FooterImages/discover.png" alt="Discover" />
+          <div class="">
+            <img src="assets/Images/FooterImages/discover.svg" alt="Discover" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
-              src="assets/Images/FooterImages/Dinners Club.svg"
+              src="assets/Images/FooterImages/diners club.svg"
               alt="Dinners Club"
             />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/Elo.svg" alt="Elo" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img src="assets/Images/FooterImages/JCB.svg" alt="JCB" />
           </div>
 
-          <div class="payment-image">
+          <div class="">
             <img
               src="assets/Images/FooterImages/Union Pay.svg"
               alt="Union Pay"

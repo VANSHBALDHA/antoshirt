@@ -8,11 +8,108 @@
     <script src="/main.js"></script>
   </head>
   <body>
+    <!-- Header Section -->
+    <header>
+      <div class="header-container">
+        <div class="search-box">
+          <input type="text" placeholder="Search ..." />
+        </div>
+        <div class="logo">
+          <img src="/assets/Images/Logo.svg" alt="header_logo" />
+        </div>
+        <div class="header-right">
+          <div class="currency">
+            <img src="/assets/Images/currency.svg" alt="US Flag" />
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span id="selected-currency">USD $</span>
+                <i class="arrow"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li data-value="USD">USD $</li>
+                <li data-value="EUR">EUR €</li>
+                <li data-value="GBP">GBP £</li>
+                <li data-value="INR">INR ₹</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="signin">SIGN IN</a>
+          <div class="cart">
+            <img src="/assets/Images/Cart.svg" alt="Cart" />
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div>
+      <div class="mobile-nav">
+        <div class="mobile-toggle-btn">
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="logo">
+          <img src="/assets/Images/Logo.svg" alt="header_logo" />
+        </div>
+        <div class="Search-icon-mobile">
+          <img src="/assets/Images/search.svg" alt="header_logo" />
+        </div>
+        <div class="profile-icon-mobile">
+          <img src="/assets/Images/profile-mobile.svg" alt="header_logo" />
+        </div>
+        <div class="cart-icon-mobile">
+          <img src="/assets/Images/Cart.svg" alt="header_logo" />
+        </div>
+      </div>
+      <div class="navbar">
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+      </div>
+      <div class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <a href="#" class="nav-main">BESPOKE</a>
+        <a href="#" class="nav-main">SHIRT GALLERY</a>
+        <div class="navbar-menu">
+          <a href="#" class="">SHOP</a>
+          <img src="/assets/Images/Polygon 1.svg" alt="navbar-icon" />
+        </div>
+        <a href="#" class="nav-main">FILM & TV</a>
+        <a href="#" class="nav-main">HERITAGE</a>
+        <a href="#" class="nav-main">FAQ</a>
+        <a href="#" class="nav-main">SHIRT CARE</a>
+        <a href="#" class="nav-main">BLOG</a>
+        <a href="#" class="nav-main">CONTACT</a>
+
+        <div class="custom-mobile-currency">
+          <select class="currency">
+            <option>Currency</option>
+            <option>USD $</option>
+            <option>EUR €</option>
+            <option>GBP £</option>
+            <option>INR ₹</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
     <!-- Banner Section -->
     <div class="hero">
       <img
         src="/assets/Images/HomePageImages/medium-shot-groom-posing-with-vintage-car 1.png"
         alt=""
+      />
+      <img
+        src="/assets/Images/HomePageImages/dark layer banner.png"
+        alt=""
+        class="transparent-hero-img"
       />
       <div class="hero-content">
         <h1>CLASSIC</h1>
@@ -29,20 +126,50 @@
     <div class="product_section">
       <div class="product_info">
         <img src="/assets/Images/HomePageImages/product_1.svg" alt="" />
+        <img
+          src="/assets/Images/HomePageImages/product-transparent.png"
+          alt=""
+          class="product-transparent-img"
+        />
+        <img
+          src="/assets/Images/HomePageImages/white layer.png"
+          alt=""
+          class="product-hover-img"
+        />
         <div class="product_category">
           <h4>Shirts</h4>
         </div>
       </div>
       <div class="product_info">
         <img src="/assets/Images/HomePageImages/product_2.svg" alt="" />
+        <img
+          src="/assets/Images/HomePageImages/product-transparent.png"
+          alt=""
+          class="product-transparent-img"
+        />
+        <img
+          src="/assets/Images/HomePageImages/white layer.png"
+          alt=""
+          class="product-hover-img"
+        />
         <div class="product_category">
-          <h4>woman's wear</h4>
+          <h4>Woman's Wear</h4>
         </div>
       </div>
       <div class="product_info">
         <img src="/assets/Images/HomePageImages/product_3.svg" alt="" />
+        <img
+          src="/assets/Images/HomePageImages/product-transparent.png"
+          alt=""
+          class="product-transparent-img"
+        />
+        <img
+          src="/assets/Images/HomePageImages/white layer.png"
+          alt=""
+          class="product-hover-img"
+        />
         <div class="product_category">
-          <h4>gift certificates</h4>
+          <h4>Gift Certificates</h4>
         </div>
       </div>
     </div>
@@ -64,11 +191,92 @@
       </div>
     </div>
 
+    <!-- Slider 1 Section -->
+    <div class="slider-container">
+      <div class="slider-main">
+        <img
+          src="/assets/Images/HomePageImages/Slider-1.png"
+          alt=""
+          class="slider-main-img"
+        />
+        <img src="/assets/Images/HomePageImages/Slider-Shadow-home.png" alt="" class="slider-shadow-img" />
+        <div class="slider-btns">
+          <a href="#" class="view-all-shirts">View All shirts</a>
+
+          <div class="slider-main-box-arrow">
+            <div class="left-arrow-box">
+              <img
+                id="right"
+                src="/assets/Images/Sldier-left-home.svg"
+                alt="left-arrow"
+              />
+            </div>
+            <div class="left-arrow-box">
+              <img
+                id="right"
+                src="/assets/Images/Sldier-right-home.svg"
+                alt="left-arrow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-slider-content">
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/Shirts/shirt-1.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">White Poplin Solid Dress Shirt</p>
+          <h5 class="category-price">$275.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            select Size
+          </button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/Shirts/shirt-3.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">Black Slim Fit Dress Shirt</p>
+          <h5 class="category-price">$275.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            select Size
+          </button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/Shirts/shirt-4.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">Royal Blue Dress Shirt</p>
+          <h5 class="category-price">$275.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            select Size
+          </button>
+        </li>
+      </div>
+    </div>
+
     <!-- Banner 2 Section -->
     <div class="hero">
       <img
         src="/assets/Images/HomePageImages/young-hispanic-man-formal-outfit-sitting-restaurant-drinking-whiskey 1.png"
         alt=""
+      />
+      <img
+        src="/assets/Images/HomePageImages/dark layer (1).png"
+        alt=""
+        class="transparent-hero-img"
       />
       <div class="hero-2-content">
         <h2>Anto</h2>
@@ -148,11 +356,88 @@
       </div>
     </div>
 
+    <!-- Slider 2 Section -->
+    <div class="slider-container slider-tie-container">
+      <div class="home-slider-content">
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/HomePageImages/tie-1.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">Black Grosgrain Silk Bow Tie</p>
+          <h5 class="category-price">$225.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            Add to Cart
+          </button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/HomePageImages/tie-2.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">Gold Paisley Silk Bow Tie</p>
+          <h5 class="category-price">$200.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            Add to Cart
+          </button>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img
+              src="/assets/Images/HomePageImages/tie-3.svg"
+              alt="img"
+              draggable="false"
+            />
+          </div>
+          <p class="category-name">Charcoal Gray Basket Weave Silk</p>
+          <h5 class="category-price">$150.00</h5>
+          <button class="category-size" fdprocessedid="mlwhy">
+            Add to cart
+          </button>
+        </li>
+      </div>
+      <div class="slider-main">
+        <img src="/assets/Images/Slider-2.png" alt="" class="slider-main-img" />
+        <img src="/assets/Images/HomePageImages/Slider-Shadow-home.png" alt="" class="slider-shadow-img" />
+        <div class="slider-btns">
+          <a href="#" class="view-all-shirts">View All bow ties</a>
+
+          <div class="slider-main-box-arrow">
+            <div class="left-arrow-box">
+              <img
+                id="right"
+                src="/assets/Images/Sldier-left-home.svg"
+                alt="left-arrow"
+              />
+            </div>
+            <div class="left-arrow-box">
+              <img
+                id="right"
+                src="/assets/Images/Sldier-right-home.svg"
+                alt="left-arrow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Banner 3 Section -->
     <div class="hero">
       <img
-        src="/assets/Images/HomePageImages/front-view-handsome-bridegroom-with-beard-wearing-trendy-suit-sitting-leather-sofa-luxury-apartment-holding-glass-filled-with-beverage-looking-camera 1@2x.png"
+        src="/assets/Images/HomePageImages/front-view-handsome-bridegroom-with-beard-wearing-trendy-suit-sitting-leather-sofa-luxury-apartment-holding-glass-filled-with-beverage-looking-camera 1.png"
         alt=""
+      />
+      <img
+        src="/assets/Images/HomePageImages/dark layer.png"
+        alt=""
+        class="transparent-hero-img-2"
       />
       <div class="hero-3-content">
         <h2>Black</h2>
@@ -168,5 +453,176 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section contact-us">
+          <h3>CONTACT US</h3>
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Phone.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Call Us</p>
+              <a href="tel:+(310)-278-4500"><span>(310)-278-4500</span></a>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Email.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Inquiry for Mail</p>
+              <a href="mailto:info@antoshirt.com">
+                <span>info@antoshirt.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Location.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Address</p>
+              <span>258 N. Beverly Drive Beverly Hills, CA 90210</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-icon">
+              <img src="/assets/Images/FooterImages/Alarm.svg" alt="phone" />
+            </div>
+            <div>
+              <p>Showroom Time</p>
+              <h6>Mon - Fri, 10am to 6pm</h6>
+              <h6>Saturday, 10am to 5pm</h6>
+              <h6>Sunday, Closed</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>COMPANY</h3>
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Bespoke</a></li>
+            <li><a href="#">Heritage</a></li>
+            <li><a href="#">Film & TV</a></li>
+            <li><a href="#">Shirt Gallery</a></li>
+            <li><a href="#">Shirt Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h3>NEWSLETTER</h3>
+          <p>
+            Like Being First? Get can't-miss style news, before everybody else.
+          </p>
+          <input type="email" placeholder="Email address" />
+          <button class="subscribe_btn">SUBSCRIBE</button>
+          <div class="social-icons">
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Facebook.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Twitter.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Instagram.svg"
+                  alt="phone"
+                /></div
+            ></a>
+            <a href="#">
+              <div class="contact-icon">
+                <img
+                  src="/assets/Images/FooterImages/Tiktok.svg"
+                  alt="phone"
+                /></div
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-rights">
+          <p class="footer-reserved">
+            © 2025 <strong>Anto</strong>, All rights reserved.
+          </p>
+          <p class="footer-powered">Powered by <strong>Shopify</strong></p>
+        </div>
+
+        <div class="payment-icons">
+          <div class="">
+            <img src="assets/Images/FooterImages/Visa.svg" alt="Visa" />
+          </div>
+
+          <div class="">
+            <img
+              src="assets/Images/FooterImages/Master card.svg"
+              alt="Mastercard"
+            />
+          </div>
+
+          <div class="">
+            <img
+              src="assets/Images/FooterImages/amex.svg"
+              alt="American Express"
+            />
+          </div>
+
+          <div class="">
+            <img src="assets/Images/FooterImages/discover.svg" alt="Discover" />
+          </div>
+
+          <div class="">
+            <img
+              src="assets/Images/FooterImages/diners club.svg"
+              alt="Dinners Club"
+            />
+          </div>
+
+          <div class="">
+            <img src="assets/Images/FooterImages/Elo.svg" alt="Elo" />
+          </div>
+
+          <div class="">
+            <img src="assets/Images/FooterImages/JCB.svg" alt="JCB" />
+          </div>
+
+          <div class="">
+            <img
+              src="assets/Images/FooterImages/Union Pay.svg"
+              alt="Union Pay"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -115,17 +115,29 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
-
 function changeImage(imageSrc) {
   document.getElementById("mainImage").src = imageSrc;
 }
 function decreaseQuantity() {
   let quantity = document.getElementById("quantity");
   if (quantity.value > 1) {
-      quantity.value--;
+    quantity.value--;
   }
 }
 function increaseQuantity() {
   let quantity = document.getElementById("quantity");
   quantity.value++;
+}
+
+function toggleMenu() {
+  const sidebar = document.querySelector(".sidebar");
+  const content = document.querySelector(".content");
+  const menuToggle = document.querySelector(".menu-toggle");
+  sidebar.classList.toggle("active");
+  content.classList.toggle("active");
+  if (sidebar.classList.contains("active")) {
+    menuToggle.innerHTML = "✖";
+  } else {
+    menuToggle.innerHTML = "☰";
+  }
 }
